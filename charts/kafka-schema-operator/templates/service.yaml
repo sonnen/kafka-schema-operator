@@ -11,5 +11,4 @@ spec:
       targetPort: 65532
       protocol: TCP
       name: app
-
   selector: {{ include "kubernetes.selectorLabels" . | nindent 4 }}
