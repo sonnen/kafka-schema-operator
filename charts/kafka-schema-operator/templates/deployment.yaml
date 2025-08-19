@@ -29,7 +29,7 @@ spec:
         {{-  toYaml . | nindent 8 }}
         {{- end }}
     spec:
-      serviceAccountName: "{{ .Release.Name }}-service-account"
+      serviceAccountName: "{{ .Values.name }}"
       containers:
         - name: {{ .Release.Name}}
           image: "{{ .Values.operator.image }}:{{ .Values.operator.version }}"
